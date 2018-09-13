@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Review View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MovieReviewViewController" id="BYZ-38-t0r" customClass="MovieReviewViewController" customModule="NYMovieReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="51"/>
+        </scene>
+        <!--Review Details Controller-->
+        <scene sceneID="DOx-6j-Dbm">
+            <objects>
+                <viewController storyboardIdentifier="ReviewDetailsController" id="AhF-ps-b9D" customClass="ReviewDetailsController" customModule="NYMovieReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NMw-2x-wEx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzO-yg-u9H">
+                                <rect key="frame" x="171" y="29" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6W-Mg-tw2">
+                                <rect key="frame" x="168" y="53" width="38" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-rq-hEy" customClass="CachedImageView" customModule="NYMovieReviews" customModuleProvider="target">
+                                <rect key="frame" x="16" y="76" width="343" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="DJl-TA-MP5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-IV-HXn">
+                                <rect key="frame" x="16" y="266" width="343" height="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0p-D2-MnH">
+                                <rect key="frame" x="16" y="292" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4q-yv-XXG">
+                                <rect key="frame" x="16" y="343.5" width="343" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="WebLink"/>
+                                <connections>
+                                    <action selector="goToWebPage:" destination="AhF-ps-b9D" eventType="touchUpInside" id="zEE-lg-b99"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-gB-YVg">
+                                <rect key="frame" x="16" y="321" width="343" height="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9355039172559747" green="0.97860108140043867" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CKL-Rl-dtC" firstAttribute="trailing" secondItem="hwi-IV-HXn" secondAttribute="trailing" constant="16" id="3Xq-Lb-Xbc"/>
+                            <constraint firstItem="l4q-yv-XXG" firstAttribute="leading" secondItem="CKL-Rl-dtC" secondAttribute="leading" constant="16" id="4ah-xt-Xc8"/>
+                            <constraint firstItem="aFL-gB-YVg" firstAttribute="leading" secondItem="CKL-Rl-dtC" secondAttribute="leading" constant="16" id="6FP-MO-22f"/>
+                            <constraint firstItem="CKL-Rl-dtC" firstAttribute="trailing" secondItem="2aK-rq-hEy" secondAttribute="trailing" constant="16" id="7vc-dy-1FL"/>
+                            <constraint firstItem="v6W-Mg-tw2" firstAttribute="centerX" secondItem="CKL-Rl-dtC" secondAttribute="centerX" id="BSd-gY-XMu"/>
+                            <constraint firstItem="jzO-yg-u9H" firstAttribute="centerX" secondItem="CKL-Rl-dtC" secondAttribute="centerX" id="Dk8-LJ-QNc"/>
+                            <constraint firstItem="l4q-yv-XXG" firstAttribute="top" secondItem="aFL-gB-YVg" secondAttribute="bottom" constant="11" id="DyW-bB-wyn"/>
+                            <constraint firstItem="i0p-D2-MnH" firstAttribute="leading" secondItem="CKL-Rl-dtC" secondAttribute="leading" constant="16" id="FeV-HV-a5p"/>
+                            <constraint firstItem="CKL-Rl-dtC" firstAttribute="trailing" secondItem="l4q-yv-XXG" secondAttribute="trailing" constant="16" id="LFg-aP-sP7"/>
+                            <constraint firstItem="hwi-IV-HXn" firstAttribute="top" secondItem="2aK-rq-hEy" secondAttribute="bottom" constant="8" id="Oab-3d-GaD"/>
+                            <constraint firstItem="aFL-gB-YVg" firstAttribute="top" secondItem="i0p-D2-MnH" secondAttribute="bottom" constant="8" id="RgQ-dY-Kd1"/>
+                            <constraint firstItem="2aK-rq-hEy" firstAttribute="top" secondItem="v6W-Mg-tw2" secondAttribute="bottom" constant="8" id="VTC-cl-pFJ"/>
+                            <constraint firstItem="jzO-yg-u9H" firstAttribute="top" secondItem="CKL-Rl-dtC" secondAttribute="top" constant="9" id="ai0-ZE-U7g"/>
+                            <constraint firstItem="2aK-rq-hEy" firstAttribute="leading" secondItem="CKL-Rl-dtC" secondAttribute="leading" constant="16" id="cd5-Dw-Yz6"/>
+                            <constraint firstItem="i0p-D2-MnH" firstAttribute="top" secondItem="hwi-IV-HXn" secondAttribute="bottom" constant="14" id="hkT-YV-AV7"/>
+                            <constraint firstItem="CKL-Rl-dtC" firstAttribute="trailing" secondItem="aFL-gB-YVg" secondAttribute="trailing" constant="16" id="jct-J0-VMN"/>
+                            <constraint firstItem="hwi-IV-HXn" firstAttribute="leading" secondItem="CKL-Rl-dtC" secondAttribute="leading" constant="16" id="scA-um-HAs"/>
+                            <constraint firstItem="CKL-Rl-dtC" firstAttribute="trailing" secondItem="i0p-D2-MnH" secondAttribute="trailing" constant="16" id="uJP-5p-6ua"/>
+                            <constraint firstItem="v6W-Mg-tw2" firstAttribute="top" secondItem="jzO-yg-u9H" secondAttribute="bottom" constant="3" id="vMX-TC-buY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CKL-Rl-dtC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YGM-a4-Qc5"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="v6W-Mg-tw2" id="jbO-gx-rED"/>
+                        <outlet property="headLineLabel" destination="hwi-IV-HXn" id="MSz-BM-YMK"/>
+                        <outlet property="imageView" destination="2aK-rq-hEy" id="a7t-Z4-KMD"/>
+                        <outlet property="releaseDateLabel" destination="aFL-gB-YVg" id="6tk-jd-Wrv"/>
+                        <outlet property="summaryLabel" destination="i0p-D2-MnH" id="vya-wh-A6E"/>
+                        <outlet property="titleLabel" destination="jzO-yg-u9H" id="ove-13-6V2"/>
+                        <outlet property="webLinkButton" destination="l4q-yv-XXG" id="Kl9-kR-EiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEc-NU-dgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023.2" y="50.824587706146929"/>
+        </scene>
+    </scenes>
+</document>
